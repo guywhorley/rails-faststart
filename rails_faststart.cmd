@@ -21,9 +21,12 @@ echo gem 'faker' >> Gemfile
 echo gem 'hirb' >> Gemfile
 echo gem 'awesome_print' >> Gemfile
 echo gem 'forgery', '0.6.0' >> Gemfile
+echo gem 'rspec-rails' >> Gemfile
 
+REM Have rails gather the necesaary gems
 call bundle install
 call rails g rails_footnotes:install
 call rails g skeleton:install
+call rails g rspec:install
 
 dir /w
