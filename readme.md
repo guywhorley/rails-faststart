@@ -1,6 +1,6 @@
 # Rails Project Creation Helper
 
-# Overview
+## Overview
 
 The rails_create.cmd file automates commonly-performed tasks during Ruby on Rails project creation.<br>
 
