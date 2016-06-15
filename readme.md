@@ -2,12 +2,12 @@
 
 # Overview
 
-The rails_create.cmd file automates commonly-performed tasks during Ruby on Rails project creation.
-1. <q>rails new %1</q> is issued, creating a new rails project.
-2. The project's Gemfile is appended with the names of your favorite gems.
-3. <q>bundle install</q> is issued.
+The rails_create.cmd file automates commonly-performed tasks during Ruby on Rails project creation.<br>
+1. <q>rails new %1</q> is issued, creating a new rails project.<br>
+2. The project's Gemfile is appended with the names of your favorite gems.<br>
+3. <q>bundle install</q> is issued.<br>
 4. Any custom 'rails g ...' commands are issued to finalize gem installs. This will depend on the gems
-that are included.
+that are included.<br>
 
 ## Syntax
 
