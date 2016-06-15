@@ -25,7 +25,7 @@ To create a new rails project called Widgets in the c:/sw/rails_projects directo
 
 ## Caveats
 
-1. You must have the <q>rails_faststart.cmd</q> located somewhere in your path.<br>
+1. <q>rails_faststart.cmd</q> must located somewhere in the system path.<br>
 
 2. Any gems that are listed in the file must have already been installed on your system via 'gem install ....'. Of course, you could include the gem install commands as part of this bat file.
 
