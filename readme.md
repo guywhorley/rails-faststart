@@ -2,7 +2,7 @@
 
 ## Overview
 
-The rails_create.cmd file automates commonly-performed tasks during Ruby on Rails project creation.<br>
+The rails_faststart.cmd file automates commonly-performed tasks during Ruby on Rails project creation.<br>
 
 1. <q>rails new %1</q> is issued, creating a new rails project.<br>
 2. The project's Gemfile is appended with the names of your favorite gems.<br>
@@ -15,7 +15,7 @@ that are included.<br>
 From the directory immediately above where you want the new rails project to be installed,
 issue the command: <br>
 
-<q>rails_create NAME_OF_YOUR_PROJECT</q>
+<q>rails_faststart NAME_OF_YOUR_PROJECT</q>
 
 *Example*
 
@@ -25,6 +25,7 @@ To create a new rails project called Widgets in the c:/sw/rails_projects directo
 
 ## Caveats
 
+0. You must have the <q>rails_faststart.cmd</q> located somewhere in your path.<br>
 1. Any gems that are listed in the file must have already been installed on your system via 'gem install ....'. Of course, you could include the gem install commands as part of this bat file.
 2. If the gem definition in Gem file requires the > character, that character must be escaped with the ^ charactger (Windows-OS specific). See lines 18, 19 in the rails_create.cmd for an example of this.<br>
 
