@@ -19,9 +19,9 @@ issue the command: <br>
 
 *Example*
 
-To create a new rails project called Widgets in the c:/sw/rails_projects directory:
-1. From the command line, navigate to c:/sw/rails_projects
-2. Issue the command: <q>rails_create Widget</q>
+To create a new rails project called Widgets in the c:/sw/rails_projects directory:<br>
+1. From the command line, navigate to c:/sw/rails_projects<br>
+2. Issue the command: <q>rails_create Widget</q><br>
 
 ## Caveats
 
