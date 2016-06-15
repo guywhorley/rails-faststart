@@ -29,4 +29,4 @@ To create a new rails project called Widgets in the c:/sw/rails_projects directo
 2. Any gems that are listed in the file must have already been installed on your system via 'gem install ....'. Of course, you could include the gem install commands as part of this bat file.
 3. If the gem definition in Gem file requires the > character, that character must be escaped with the ^ charactger (Windows-OS specific). See lines 18, 19 in the rails_create.cmd for an example of this.<br>
 
-    gem 'google-webfonts-rails', '~^> 0.0.4' >> Gemfile
+    gem 'google-webfonts-rails', '~^> 0.0.4' >> Gemfile   
