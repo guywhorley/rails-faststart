@@ -21,7 +21,7 @@ issue the command: <br>
 
 To create a new rails project called Widgets in the c:/sw/rails_projects directory:<br>
 1. From the command line, navigate to c:/sw/rails_projects<br>
-2. Issue the command: <q>rails_create Widget</q><br>
+2. Issue the command: <q>rails_faststart Widget</q><br>
 
 ## Caveats
 
