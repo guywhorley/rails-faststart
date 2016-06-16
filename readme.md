@@ -21,12 +21,12 @@ that are included.<br>
 
 From the directory immediately above where you want the new rails project to be installed,
 issue the command: <br>
+&nbsp;&nbsp;&nbsp;&nbsp; <q>rails_faststart NAME_OF_YOUR_PROJECT</q><br>
 
-<q>rails_faststart NAME_OF_YOUR_PROJECT</q><br>
-OR<br>
-<q>rails_mygems"</q><br>
+OR from with an existing project's root folder: <br>
+&nbsp;&nbsp;&nbsp;&nbsp; <q>rails_mygems"</q><br>
 
-*Example*
+*Example*<br>
 
 To create a new rails project called Widgets in the c:/sw/rails_projects directory and install your favorite gems:<br>
 1. From the command line, navigate to c:/sw/rails_projects<br>
