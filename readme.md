@@ -4,14 +4,14 @@
 
 The rails_faststart helper batch files automate commonly-performed tasks during Ruby on Rails project creation.<br>
 
-*rails_faststart.cmd*
+*rails_faststart.cmd* <br>
 1. <q>rails new %1</q> is issued, creating a new rails project.<br>
 2. The project's Gemfile is appended with the names of your favorite gems.<br>
 3. <q>bundle install</q> is issued.<br>
 4. Any custom 'rails g ...' commands are issued to finalize gem installs. This will depend on the gems
 that are included.<br>
 
-*rails_mygems.cmd*
+*rails_mygems.cmd* <br>
 1. The project's Gemfile is appended with the names of your favorite gems.<br>
 2. <q>bundle install</q> is issued.<br>
 3. Any custom 'rails g ...' commands are issued to finalize gem installs. This will depend on the gems
