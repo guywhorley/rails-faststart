@@ -1,20 +1,11 @@
 @echo off
 
-REM Create a new rails project %1, install my favorite gems, and call 'bundle install'.
-REM Syntax
-REM    at the root of the rails project folder, type: "rails_new_gems <new-project-name>
+REM Install my favorite gems, update Gemfile and call 'bundle install'.
+REM Usage
+REM    at the ROOT-DIRECTORY of the rails project folder, type: "rails_mygems
 
-REM Create the new rails project
+REM add gems to Gem file
 cls
-echo **********************************
-echo   Creating new rails project ...
-echo **********************************
-echo(
-echo   Calling "rails new %1"
-call rails new %1
-cd %1
-
-echo(
 echo ***************************
 echo   Adding gems to Gemfile
 echo. >> Gemfile
@@ -48,4 +39,3 @@ call rails g skeleton:install
 call rails g rspec:install
 
 dir /w
-cd ..
