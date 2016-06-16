@@ -28,12 +28,12 @@ OR from within an existing project's root folder: <br>
 
 *Example*<br>
 
-You want to create a new rails project called 'Widgets' in the c:/sw/rails_projects directory and install your favorite gems:<br>
+You want to create a new rails project called 'foo' in the c:/sw/rails_projects directory and install your favorite gems:<br>
 1. From the command line, navigate to c:/sw/rails_projects<br>
-2. Issue the command: <q>rails_faststart Widget</q><br>
+2. Issue the command: <q>rails_faststart foo</q><br>
 
-You want to append your favorite gems into an existing project's Gemfile:<br>
-1. From the command line, navigate to c:/sw/rails_projects/~PROJECT_FOLDER~<br>
+A project called foo already exists. You want to append your favorite gems into the Gemfile:<br>
+1. From the command line, navigate to c:/sw/rails_projects/foo<br>
 2. Issue the command: <q>rails_mygems</q><br>
 
 ## Caveats
