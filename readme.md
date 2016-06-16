@@ -16,23 +16,23 @@ that are included.<br>
 2. <q>bundle install</q> is issued.<br>
 3. Any custom 'rails g ...' commands are issued to finalize gem installs. This will depend on the gems
 that are included.<br>
-  
+
 ## Syntax
 
 From the directory immediately above where you want the new rails project to be installed,
 issue the command: <br>
 &nbsp;&nbsp;&nbsp;&nbsp; <q>rails_faststart NAME_OF_YOUR_PROJECT</q><br>
 
-OR from with an existing project's root folder: <br>
+OR from within an existing project's root folder: <br>
 &nbsp;&nbsp;&nbsp;&nbsp; <q>rails_mygems"</q><br>
 
 *Example*<br>
 
-To create a new rails project called Widgets in the c:/sw/rails_projects directory and install your favorite gems:<br>
+You want to create a new rails project called 'Widgets' in the c:/sw/rails_projects directory and install your favorite gems:<br>
 1. From the command line, navigate to c:/sw/rails_projects<br>
 2. Issue the command: <q>rails_faststart Widget</q><br>
 
-To append your favorite gems into an existing project's Gemfile:<br>
+You want to append your favorite gems into an existing project's Gemfile:<br>
 1. From the command line, navigate to c:/sw/rails_projects/~PROJECT_FOLDER~<br>
 2. Issue the command: <q>rails_mygems</q><br>
 
