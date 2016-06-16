@@ -16,7 +16,7 @@ that are included.<br>
 2. <q>bundle install</q> is issued.<br>
 3. Any custom 'rails g ...' commands are issued to finalize gem installs. This will depend on the gems
 that are included.<br>
-
+  
 ## Syntax
 
 From the directory immediately above where you want the new rails project to be installed,
