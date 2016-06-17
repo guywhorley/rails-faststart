@@ -87,7 +87,7 @@ end
 
 You will need to *switch-on* Capybara's Webdriver by modifying your *_spec.rb file as described in this below.
 
-For any specs requiring Selenium integration (you want a real instance of firefox to launch), place your test code within the /spec/features folder.<br>
+For any specs requiring Selenium integration, place your test code within the /spec/features folder.<br>
 
 ```
 /spec/features/YOUR-FEATURES_spec.rb...
