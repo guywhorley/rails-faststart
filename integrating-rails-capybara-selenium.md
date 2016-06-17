@@ -12,7 +12,7 @@ I finally found the sweet spot that is the proverbial big bag of Capybara/Seleni
 6. __[optional] Tim's Cascade Hawaiian Chips (Party Size)__
 
 ## Prerequisites
-1. Ruby and Rails in a happy place, with big fluffy clouds and cute little critters, ala Bob Ross.
+1. Ruby and Rails are in a happy place, filled with ginormous Maxfield Parrish-like clouds and rainbows.
 2. A rails project has been created. (__"rails new cujo__")  
 
 ### 1.0 Install Gems
