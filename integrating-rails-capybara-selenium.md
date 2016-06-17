@@ -28,11 +28,13 @@ gem install rspec-rails<br>
 gem install capybara<br>
 gem install selenium-webdriver<br>
 gem install database_cleaner<br>
-```selenium-webdriver v2.53.3 was the most current at the time of this writing.
+```
+Note: selenium-webdriver v2.53.3 was the most current at the time of this writing.
 
 ### 2.0 Update Gemfile
 
 Add the following entries into the _'group :development, :test'_ block:
+
 ```
 group :development, :test do
   gem 'rspec'
@@ -41,7 +43,7 @@ group :development, :test do
   gem 'selenium-webdriver', '~> 2.53.3'
   gem 'database_cleaner'
 end
-```Save and exit.
+```
 
 ### 3.0 Bundle Install and Initialize RSpec 
 
