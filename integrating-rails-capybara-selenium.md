@@ -36,26 +36,26 @@ gem install database_cleaner<br>
 Edit the Gemfile in the root of your Rails project. <br>
 
 Add the following entries into the _'group :development, :test'_ block:<br>
-
-group :development, :test do<br>
-&nbsp;&nbsp;&nbsp;&nbsp;gem 'rspec'<br>
-&nbsp;&nbsp;&nbsp;&nbsp;gem 'rspec-rails'<br>
-&nbsp;&nbsp;&nbsp;&nbsp;gem 'capybara'<br>
-&nbsp;&nbsp;&nbsp;&nbsp;gem 'selenium-webdriver', '~> 2.53.3'<br>
-&nbsp;&nbsp;&nbsp;&nbsp;gem 'database_cleaner'<br>
-end<br>
-
+```
+group :development, :test do
+  gem 'rspec'
+  gem 'rspec-rails'  
+  gem 'capybara'
+  gem 'selenium-webdriver', '~> 2.53.3'
+  gem 'database_cleaner'
+end
+```
 Save and exit.
 
 ### 3.0 Bundle Install and Initialize RSpec 
 
 3.1 At the command-line in the root of the rails project, issue the following commands:<br>
 
-*"bundle install"*
+```bundle install```
 
 3.2 Initialize the */spec* directory:<br>
 
-*"rails generate rspec:install"*
+```rails generate rspec:install```
 
 ### 4.0 Enable Capybara Integration with RSpec
 
@@ -90,11 +90,9 @@ You will need to *switch on* Capybara's Webdriver by modifying your *_spec.rb fi
 
 For any specs requiring Selenium integration (you want a real instance of firefox to launch), place your test code within the /spec/features folder.<br>
 
-Setup the */spec/features/<your-file>_spec.rb* as follows:<br>
-
-/spec/features/my_features_spec.rb
-require 'rails_helper'
 ```
+/spec/features/YOUR-FEATURES_spec.rb...
+require 'rails_helper'
 RSpec.describe "<YOUR-DESCRIBE-HERE>", :js => true do  #NOTE: ':js => true' 'turns on capybara selenium webdriver'
 	scenario "login page is accessible and has email and password fields" do
 		visit "http://localhost:3000/cujo/index"
