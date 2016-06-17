@@ -23,9 +23,10 @@ echo group :development, :test do >> Gemfile
 echo   gem 'rspec' >> Gemfile
 echo   gem 'rspec-rails' >> Gemfile
 echo   gem 'byebug' >> Gemfile
-REM echo   gem 'database_cleaner', '~^> 1.5', '^>= 1.5.3' >> Gemfile
-REM echo   gem 'capybara-rails', '~^> 0.0.2' >> Gemfile
-REM echo   gem 'capybara' >> Gemfile
+echo   gem 'capybara' >> Gemfile
+echo   gem 'selenium-webdriver', '~^> 2.53.3' >> Gemfile
+echo   gem 'database_cleaner' >> Gemfile
+
 echo end >> Gemfile
 
 echo. >> Gemfile
