@@ -19,14 +19,14 @@ a hefty fee to exercise the demons from the computer. Your call.)
 
 ### 1.0 Install Gems
 
-The following gems will need to be installed: 
-rspec, rspec-rails, capybara, selenium-webdriver, database_cleaner
+The following gems will need to be installed:<br> 
+*rspec, rspec-rails, capybara, selenium-webdriver, database_cleaner*
 
-gem install rspec
-gem install rspec-rails
-gem install capybara
-gem install selenium-webdriver
-gem install database_cleaner
+gem install rspec<br>
+gem install rspec-rails<br>
+gem install capybara<br>
+gem install selenium-webdriver<br>
+gem install database_cleaner<br>
 * at the time of this writing, selenium-webdriver 2.53.3 was the latest release.
 
 ### 2.0 Update Gemfile
