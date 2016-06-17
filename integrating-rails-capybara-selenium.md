@@ -23,11 +23,11 @@ The following gems will need to be installed:<br>
 
 From the command-line: issue the following commands:<br>
 ```
-gem install rspec<br>
-gem install rspec-rails<br>
-gem install capybara<br>
-gem install selenium-webdriver<br>
-gem install database_cleaner<br>
+gem install rspec
+gem install rspec-rails
+gem install capybara
+gem install selenium-webdriver
+gem install database_cleaner
 ```
 Note: selenium-webdriver v2.53.3 was the most current at the time of this writing.
 
