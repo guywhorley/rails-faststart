@@ -10,7 +10,7 @@ a hefty fee to exercise the demons from the computer. Your call.)
 2. Ruby  2.2.4
 3. Rails 4.2.6
 4. Deschutes Black Butte Porter - 6 pack
-5. Tim's Cascade Hawiian Chips (Party Size)
+5. Tim's Cascade Hawaiian Chips (Party Size)
 
 ## Prerequisites
 1. Ruby and Rails in a happy state, with big fluffy clouds and cute little critters, ala Bob Ross.
