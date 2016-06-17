@@ -105,7 +105,7 @@ RSpec.describe "<YOUR-DESCRIBE-HERE>", :js => true do  #NOTE: ':js => true' 'tur
     # capybara finds by #id, name atribute, or visible text
     # see CHEAT SHEET BELOW
     fill_in "email", with: "cujo@bigscarydog.edu"
-    fill_in "password", with: "I_luv_squirrels"
+    fill_in "password", with: "I_luv_squirrels__for__fuud"
     click_button "Login" 
     expect(page).to have_content "Logged In"
   end
