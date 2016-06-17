@@ -1,8 +1,8 @@
-# Rails Project Creation Helper
+# rails-faststart
 
 ## Overview
 
-The rails_faststart helper batch files automate commonly-performed tasks during Ruby on Rails project creation.<br>
+The batch files and shell scripts in this repository automate commonly-performed tasks during Ruby on Rails project creation.<br>
 
 *rails_faststart.cmd* <br>
 1. <q>rails new %1</q> is issued, creating a new rails project.<br>
