@@ -22,12 +22,13 @@ The following gems will need to be installed:<br>
 *rspec, rspec-rails, capybara, selenium-webdriver, database_cleaner*
 
 From the command-line: issue the following commands:<br>
-
+```
 gem install rspec<br>
 gem install rspec-rails<br>
 gem install capybara<br>
 gem install selenium-webdriver<br>
 gem install database_cleaner<br>
+```
 *selenium-webdriver v2.53.3 was the most current at the time of this writing.
 
 ### 2.0 Update Gemfile
@@ -35,14 +36,14 @@ gem install database_cleaner<br>
 Edit the Gemfile in the root of your Rails project. <br>
 
 Add the following entries into the _'group :development, :test'_ block:<br>
-<small>
+
 group :development, :test do<br>
 &nbsp;&nbsp;&nbsp;&nbsp;gem 'rspec'<br>
 &nbsp;&nbsp;&nbsp;&nbsp;gem 'rspec-rails'<br>
 &nbsp;&nbsp;&nbsp;&nbsp;gem 'capybara'<br>
 &nbsp;&nbsp;&nbsp;&nbsp;gem 'selenium-webdriver', '~> 2.53.3'<br>
 &nbsp;&nbsp;&nbsp;&nbsp;gem 'database_cleaner'<br>
-end<br></small>
+end<br>
 
 Save and exit.
 
@@ -61,13 +62,14 @@ Save and exit.
 4.1 Update the *"spec_helper.rb"* file 
 
 In the */spec/spec_helper.rb* file, add the following lines at the top:<br>
-
+```
 require File.expand_path("../../config/environment", __FILE__)<br>
 require 'rspec/rails'<br>
 require 'capybara/rspec'<br>
 require 'capybara/rails'<br>
 Capybara.server_port = 57124<br>
 Capybara.app_host = "http://localhost:#{Capybara.server_port}"<br>
+```
 
 4.2 Update the *"rails_helper.rb"* file
 
@@ -77,11 +79,10 @@ In the */spec/rails_helper.rb* file:
 
 Add support for Capybara DSL by adding the following line near the end of configure block:<br>
 
-&nbsp;&nbsp;RSpec.configure do |config| <br>
-&nbsp;&nbsp;...<br>
-&nbsp;&nbsp;...<br>  
-&nbsp;&nbsp;&nbsp;config.include Capybara::DSL
-&nbsp;&nbsp;end
+RSpec.configure do |config| 
+  
+  config.include Capybara::DSL
+end 
   
 ### 5.0 Enable Selenium/Firefox within the spec file
 
@@ -93,8 +94,8 @@ Setup the */spec/features/<your-file>_spec.rb* as follows:<br>
 
 /spec/features/my_features_spec.rb
 require 'rails_helper'
-
-RSpec.describe "<YOUR-DESCRIBE-HERE>", :js => true do  NOTE: ':js => true' 'turns on capybara selenium webdriver'
+```
+RSpec.describe "<YOUR-DESCRIBE-HERE>", :js => true do  #NOTE: ':js => true' 'turns on capybara selenium webdriver'
 	scenario "login page is accessible and has email and password fields" do
 		visit "http://localhost:3000/cujo/index"
 		expect(page).to have_field('email')
@@ -109,7 +110,7 @@ RSpec.describe "<YOUR-DESCRIBE-HERE>", :js => true do  NOTE: ':js => true' 'turn
         expect(page).to have_content "Logged In"
     end
 end 
-
+```
 Capybara Cheat Sheet https://gist.github.com/zhengjia/428105
 
 ### 6.0 Run The Tests 
