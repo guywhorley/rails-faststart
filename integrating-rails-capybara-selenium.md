@@ -1,21 +1,19 @@
 # Introduction
 
 After spending more that few frustrating hours trying to get Rails, Rspec, Capybara, and Selenium Webriver to play nicely together,
-I am documenting which gems and files I updated to finally make the browser magically work all by itself. (Look ma, no hands' on the keyboard yet I am filling in form fields === BY THE POWER OF MY MIND! Hey ... no one else needs to know that it is actually the
-selenium webdriver that is powering it all. Or you could put it down to evil spirits trying to inhabit the computer - and the charge 
-a hefty fee to exercise the demons from the computer. Your call.)
+I finally found the sweet spot of the Capybara/Selenium goodness. I am documenting the gems and files I updated to finally make the browser magically work all by itself. (Look ma, no hands' on the keyboard yet I am filling in form fields === BY THE POWER OF MY MIND! Hey ... no one else needs to know that it is actually the selenium webdriver that is powering it all. Or you could put it down to evil spirits trying to inhabit the computer - and the charge a hefty fee to exercise the demons from the computer. Your call.)
 
 ## Envronment: 
 1. Windows 10, 64-bit
 2. Ruby  v2.2.4
 3. Rails v4.2.6
-4. Firefox v46.0.1 
-5. [optional] Deschutes Black Butte Porter - 6 pack  { ++emptyBottles; --lucidity; }
-6. [optional] Tim's Cascade Hawaiian Chips (Party Size)
+4. Firefox v46.0.1
+5. __[optional] Deschutes Black Butte Porter - 6 pack__  { ++emptyBottles; --lucidity; }
+6. __[optional] Tim's Cascade Hawaiian Chips (Party Size)__
 
 ## Prerequisites
 1. Ruby and Rails in a happy state, with big fluffy clouds and cute little critters, ala Bob Ross.
-2. A rails project has been created. ("rails new cujo")  
+2. A rails project has been created. (__"rails new cujo__")  
 
 ### 1.0 Install Gems
 
@@ -27,7 +25,7 @@ gem install rspec-rails<br>
 gem install capybara<br>
 gem install selenium-webdriver<br>
 gem install database_cleaner<br>
-* at the time of this writing, selenium-webdriver 2.53.3 was the latest release.
+*selenium-webdriver v2.53.3 was the most current at the time of this writing.
 
 ### 2.0 Update Gemfile
 
@@ -46,27 +44,27 @@ Save and exit.
 
 ### 3.0 Bundle Install and Initialize RSpec 
 
-At the command-line in the root of the rails project, issue the following commands:
+At the command-line in the root of the rails project, issue the following commands:<br>
 "bundle install"
 
-Initialize the /spec directory: 
+Initialize the */spec* directory:<br>
 "rails generate rspec:install"
 
 ### 4.0 Enable Capybara Integration with RSpec
 
-4.1 Update "spec_helper.rb" 
+4.1 Update *"spec_helper.rb"* 
 
-In the <project>/spec/spec_helper.rb file, add the following lines at the top:
+In the *<project>/spec/spec_helper.rb* file, add the following lines at the top:
 
-# Add this to the top of your spec_helper.rb file to load Capybara integration:
-require File.expand_path("../../config/environment", __FILE__)
-require 'rspec/rails'
-require 'capybara/rspec'
-require 'capybara/rails'
-Capybara.server_port = 57124
-Capybara.app_host = "http://localhost:#{Capybara.server_port}"
+# Add this to the **top** of your *spec_helper.rb* file to load Capybara integration:<br>
+require File.expand_path("../../config/environment", __FILE__)<br>
+require 'rspec/rails'<br>
+require 'capybara/rspec'<br>
+require 'capybara/rails'<br>
+Capybara.server_port = 57124<br>
+Capybara.app_host = "http://localhost:#{Capybara.server_port}"<br>
 
-4.2 Update "rails_helper.rb"
+4.2 Update *"rails_helper.rb"*
 
 Without this update, when running 'rspec spec' (i.e. the actual test run), rspec did not recognize the capybara 'visit' method. By adding this line, rspec was able to recognize the Capybara Domain-Specific Language.
 
