@@ -93,19 +93,22 @@ For any specs (tests) requiring Selenium integration, place your test code withi
 /spec/features/YOUR-FEATURES_spec.rb...
 require 'rails_helper'
 RSpec.describe "<YOUR-DESCRIBE-HERE>", :js => true do  #NOTE: ':js => true' 'turns on capybara selenium webdriver'
-	scenario "login page is accessible and has email and password fields" do
-		visit "http://localhost:3000/cujo/index"
-		expect(page).to have_field('email')
-        expect(page).to have_field('password')
-	end
-	scenario "successfully login" do
-        visit "http://localhost:3000/cujo/index"
-		# capybara finds by #id, name atribute, or visible text
-		fill_in "email", with: "cujo@bigscarydog.edu"
-        fill_in "password", with: "I_luv_squirrels"
-        click_button "Login" 
-        expect(page).to have_content "Logged In"
-    end
+	
+  scenario "login page is accessible and has email and password fields" do
+    visit "http://localhost:3000/cujo/index"
+    expect(page).to have_field('email')
+    expect(page).to have_field('password')
+  end
+	
+  scenario "successfully login" do
+    visit "http://localhost:3000/cujo/index"
+    # capybara finds by #id, name atribute, or visible text
+    # see CHEAT SHEET BELOW
+    fill_in "email", with: "cujo@bigscarydog.edu"
+    fill_in "password", with: "I_luv_squirrels"
+    click_button "Login" 
+    expect(page).to have_content "Logged In"
+  end
 end 
 ```
 Capybara Cheat Sheet https://gist.github.com/zhengjia/428105
