@@ -61,12 +61,12 @@ end
 
 In the */spec/spec_helper.rb* file, add the following lines at the top:<br>
 ```
-require File.expand_path("../../config/environment", __FILE__)<br>
-require 'rspec/rails'<br>
-require 'capybara/rspec'<br>
-require 'capybara/rails'<br>
-Capybara.server_port = 57124<br>
-Capybara.app_host = "http://localhost:#{Capybara.server_port}"<br>
+require File.expand_path("../../config/environment", __FILE__)
+require 'rspec/rails'
+require 'capybara/rspec'
+require 'capybara/rails'
+Capybara.server_port = 57124
+Capybara.app_host = "http://localhost:#{Capybara.server_port}"
 ```
 
 4.2 Update the *"rails_helper.rb"* file
