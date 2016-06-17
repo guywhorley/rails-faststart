@@ -72,7 +72,7 @@ Capybara.app_host = "http://localhost:#{Capybara.server_port}"
 4.2 Update the *"rails_helper.rb"* file
 
 ```"visit is an unrecognized method"``` <br>
-Initially, rspec did not recognize the capybara *visit* method. After updating the rails_helper.rb, rspec was able to recognize the Capybara Domain-Specific Language, thus understanding what **visit** actually meant as in ... open up the firefox browser then go and visit my login page **now** please! The other critical piece of this is to ensure that the feature spec file containing your tests are stored in /spec/features AND that the "describes" line has :js => true (see section 5.0).
+Initially, rspec did not recognize the capybara *visit* method. After updating the rails_helper.rb, rspec was able to recognize the Capybara Domain-Specific Language, thus understanding what **visit** actually meant as in ... open up the firefox browser then go and visit my login page **now** please! The other critical piece of this is to ensure that the feature spec file containing your tests are stored in ```/spec/features``` **AND*** that the "describes" line has ```:js => true``` (see section 5.0).
 
 Enable RSpec to Understand Capybara DSL by adding the following line near the bottom of the */spec/rails_helper.rb* configure block:<br>
 
