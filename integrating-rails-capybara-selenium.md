@@ -35,30 +35,30 @@ gem install database_cleaner<br>
 Edit the Gemfile in the root of your Rails project. <br>
 
 Add the following entries into the _'group :development, :test'_ block:<br>
-
+<small>
 group :development, :test do<br>
 &nbsp;&nbsp;&nbsp;&nbsp;gem 'rspec'<br>
 &nbsp;&nbsp;&nbsp;&nbsp;gem 'rspec-rails'<br>
 &nbsp;&nbsp;&nbsp;&nbsp;gem 'capybara'<br>
 &nbsp;&nbsp;&nbsp;&nbsp;gem 'selenium-webdriver', '~> 2.53.3'<br>
 &nbsp;&nbsp;&nbsp;&nbsp;gem 'database_cleaner'<br>
-end<br>
+end<br></small>
 
 Save and exit.
 
 ### 3.0 Bundle Install and Initialize RSpec 
 
-At the command-line in the root of the rails project, issue the following commands:<br>
+3.1 At the command-line in the root of the rails project, issue the following commands:<br>
 
 *"bundle install"*
 
-Initialize the */spec* directory:<br>
+3.2 Initialize the */spec* directory:<br>
 
 *"rails generate rspec:install"*
 
 ### 4.0 Enable Capybara Integration with RSpec
 
-4.1 Update *"spec_helper.rb"* 
+4.1 Update the *"spec_helper.rb"* file 
 
 In the */spec/spec_helper.rb* file, add the following lines at the top:<br>
 
@@ -69,16 +69,19 @@ require 'capybara/rails'<br>
 Capybara.server_port = 57124<br>
 Capybara.app_host = "http://localhost:#{Capybara.server_port}"<br>
 
-4.2 Update *"rails_helper.rb"*
+4.2 Update the *"rails_helper.rb"* file
 
-Without this update, when running **'rspec spec'** (i.e. the actual test run), rspec did not recognize the capybara **visit** method. By adding this line, rspec was able to recognize the Capybara Domain-Specific Language, thus understanding what **visit** actually meant as in ... go visit my login page **now** please!
+"visit" is an unrecognized method": Without this update, when running rspec tests, rspec did not recognize the capybara <u>visit</u> method. By adding this line, rspec was able to recognize the Capybara Domain-Specific Language, thus understanding what **visit** actually meant as in ... go visit my login page **now** please!
 
-Add support for Capybara DSL by adding the following line near the very end of configure block in /spec/rails_helper.rb file:
-  RSpec.configure do |config|
-  ...
-  ...  
-    config.include Capybara::DSL
-  end
+In the */spec/rails_helper.rb* file: 
+
+Add support for Capybara DSL by adding the following line near the end of configure block:<br>
+
+&nbsp;&nbsp;RSpec.configure do |config| <br>
+&nbsp;&nbsp;...<br>
+&nbsp;&nbsp;...<br>  
+&nbsp;&nbsp;&nbsp;config.include Capybara::DSL
+&nbsp;&nbsp;end
   
 ### 5.0 Enable Selenium/Firefox within the spec file
 
