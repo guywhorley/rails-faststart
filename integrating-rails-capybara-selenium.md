@@ -33,7 +33,7 @@ Note: selenium-webdriver v2.53.3 was the most current at the time of this writin
 
 ### 2.0 Update Gemfile
 
-Add the following entries into the _'group :development, :test'_ block:
+Add the following entries into your Gemfile block _'group :development, :test'_:
 
 ```
 group :development, :test do
@@ -71,20 +71,21 @@ Capybara.app_host = "http://localhost:#{Capybara.server_port}"<br>
 
 4.2 Update the *"rails_helper.rb"* file
 
-"visit" is an unrecognized method": Without this update, when running rspec tests, rspec did not recognize the capybara <u>visit</u> method. By adding this line, rspec was able to recognize the Capybara Domain-Specific Language, thus understanding what **visit** actually meant as in ... go visit my login page **now** please!
+*"visit"* is an unrecognized method": Initially, rspec did not recognize the capybara *visit* method. By adding this line, rspec was able to recognize the Capybara Domain-Specific Language, thus understanding what **visit** actually meant as in ... go visit my login page **now** please!
 
-In the */spec/rails_helper.rb* file: 
+Add support for Capybara DSL by adding the following line near the bottom of the */spec/rails_helper.rb* configure block:<br>
 
-Add support for Capybara DSL by adding the following line near the end of configure block:<br>
-
+```
 RSpec.configure do |config| 
-  
+  ...
+  ...
   config.include Capybara::DSL
-end 
+end
+```
   
 ### 5.0 Enable Selenium/Firefox within the spec file
 
-You will need to *switch on* Capybara's Webdriver by modifying your *_spec.rb file as described in this below.
+You will need to *switch-on* Capybara's Webdriver by modifying your *_spec.rb file as described in this below.
 
 For any specs requiring Selenium integration (you want a real instance of firefox to launch), place your test code within the /spec/features folder.<br>
 
