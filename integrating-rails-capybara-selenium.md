@@ -87,7 +87,7 @@ end
 
 You will need to *switch-on* Capybara's Webdriver by modifying your *_spec.rb file as described in this below.
 
-For any specs requiring Selenium integration, place your test code within the /spec/features folder.<br>
+For any specs (tests) requiring Selenium integration, place your test code within the /spec/features folder.<br>
 
 ```
 /spec/features/YOUR-FEATURES_spec.rb...
@@ -110,7 +110,7 @@ end
 ```
 Capybara Cheat Sheet https://gist.github.com/zhengjia/428105
 
-### 6.0 Run The Tests 
+### 6.0 Run The Specs 
 
 The simplest way to run rspec tests is from the command line by simply typing "rspec ." or "rspec spec" at project root.
 See online rspec documentation for the myriad ways that one could run tests.  
