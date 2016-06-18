@@ -87,7 +87,7 @@ end
   
 ### 5.0 Enable Selenium/Firefox within the spec file
 
-You will need to *switch-on* Capybara's Webdriver by modifying your *_spec.rb file as described in this below.
+You will need to *switch-on* Capybara's Webdriver by modifying your *_spec.rb file as described below.
 
 For any specs (tests) requiring Selenium integration, place your test code within the /spec/features folder.<br>
 
